@@ -1,0 +1,32 @@
+{
+  "name": "robot-web",
+  "description": "talking to robots",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "~3.4.0",
+    "amqplib": "0.1.3",
+    "moment": "~2.1.0",
+    "ws":"0.4.32",
+    "express" : "4.9.0"
+  },
+  "scripts": {
+    "start": "node stream-server.js love"
+  },
+  "main": "stream-server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cowboyhackr/remotevision.git"
+  },
+  "keywords": [
+    "robot",
+    "rules"
+  ],
+  "author": "cowboyhackr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cowboyhackr/robotweb/issues"
+  },
+  "homepage": "https://github.com/cowboyhackr/robotweb"
+}

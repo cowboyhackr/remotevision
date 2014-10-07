@@ -35,7 +35,7 @@
    angular.module('submitExample', [])
      .controller('ExampleController', ['$scope', '$http', function($scope, $http) {
        $scope.list = [];
-       $scope.text = '100';
+       $scope.text = '5';
        $scope.submit = function() {
          if ($scope.text) {
             $scope.list.push(this.text);
@@ -135,7 +135,7 @@
           console.log('left');
           var command = 'turn ' + this.text.toString() + ' 1';
          if ($scope.text) {
-            $scope.list.push(command);
+            $scope.list.push('<div>' + command + '<div>');
             console.log(command);
             var target = 'http://fierce-beach-8075.herokuapp.com/api/command?command=' + command;
             console.log(target);

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
 	<meta name="viewport" content="width=320, initial-scale=1"/>
 	<title>jsmpeg streaming</title>
 	<style type="text/css">
@@ -156,8 +157,16 @@
        };
      }]);
  </script>
+
+     <input type="text" ng-model="text" name="text" value="100"/>
+    <img src="../assets/up.png" ng-click="up()">
+    <img src="../assets/down.png" ng-click="down()">
+    <img src="../assets/right.png" ng-click="right()">
+    <img src="../assets/left.png" ng-click="left()">
+   <pre>list={{list}}</pre>
+   
 	<script type="text/javascript" src="jsmpg.js"></script>
-	 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+
 	 <script type="text/javascript">
 		// Show loading notice
 		var canvas = document.getElementById('videoCanvas');
@@ -172,11 +181,6 @@
 		var player = new jsmpeg(client, {canvas:canvas});
 	</script>
 
-	   <input type="text" ng-model="text" name="text" value="100"/>
-    <img src="../assets/up.png" ng-click="up()">
-    <img src="../assets/down.png" ng-click="down()">
-    <img src="../assets/right.png" ng-click="right()">
-    <img src="../assets/left.png" ng-click="left()">
-   <pre>list={{list}}</pre>ß
+
 </body>
 </html>

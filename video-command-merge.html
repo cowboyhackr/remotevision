@@ -63,7 +63,7 @@
           console.log('up');
           var command = 'move ' + this.text.toString() + ' -1';
          if ($scope.text) {
-            $scope.list.push(command);
+            $scope.list.push('<div>' + command + '</div>');
             console.log(command);
             var target = 'http://fierce-beach-8075.herokuapp.com/api/command?command=' + command;
             console.log(target);
@@ -87,7 +87,7 @@
           console.log('down');
           var command = 'move ' + this.text.toString() + ' 1';
          if ($scope.text) {
-            $scope.list.push(command);
+            $scope.list.push('<div>' + command + '</div>');
             console.log(command);
             var target = 'http://fierce-beach-8075.herokuapp.com/api/command?command=' + command;
             console.log(target);
@@ -111,7 +111,7 @@
           console.log('right');
           var command = 'turn ' + this.text.toString() + ' -1';
          if ($scope.text) {
-            $scope.list.push(command);
+            $scope.list.push('<div>' + command + '</div>');
             console.log(command);
             var target = 'http://fierce-beach-8075.herokuapp.com/api/command?command=' + command;
             console.log(target);
@@ -135,7 +135,7 @@
           console.log('left');
           var command = 'turn ' + this.text.toString() + ' 1';
          if ($scope.text) {
-            $scope.list.push('<div>' + command + '<div>');
+            $scope.list.push('<div>' + command + '</div>');
             console.log(command);
             var target = 'http://fierce-beach-8075.herokuapp.com/api/command?command=' + command;
             console.log(target);
@@ -160,10 +160,10 @@
 
      
     <div>
+        <img src="../assets/left.png" ng-click="left()">
         <img src="../assets/up.png" ng-click="up()">
         <img src="../assets/down.png" ng-click="down()">
         <img src="../assets/right.png" ng-click="right()">
-        <img src="../assets/left.png" ng-click="left()">
        <pre>list={{list}}</pre>
      </div>
      <div>

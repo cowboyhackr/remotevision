@@ -77,8 +77,8 @@ socketServer.on('connection', function(socket) {
 });
 
 socketServer.broadcast = function(data, opts) {
-	console.log('receive data');
-	console.log(data.length);
+	//console.log('receive data');
+	//console.log(data.length);
 	for( var i in this.clients ) {
 		if (this.clients[i].readyState == 1) {
 			this.clients[i].send(data, opts);

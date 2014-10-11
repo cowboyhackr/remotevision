@@ -34,8 +34,8 @@ app.use(function(request, respond, next){
 			':' + request.socket.remotePort + ' size: ' + width + 'x' + height
 		);
 		request.on('data', function(data){
-			console.log("data received.");
-			console.log(data.length);
+			//console.log("data received.");
+			//console.log(data.length);
 			socketServer.broadcast(data, {binary:true});
 		});
 	}

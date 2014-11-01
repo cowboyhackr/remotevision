@@ -10,8 +10,8 @@ if( process.argv.length < 3 ) {
 var STREAM_SECRET = process.argv[2],
 	STREAM_MAGIC_BYTES = 'jsmp'; // Must be 4 bytes
 
-var width = 320,
-	height = 240;
+var width = 160,
+	height = 120;
 
 	//server some html
 var http = require("http")
@@ -25,8 +25,8 @@ app.use(function(request, respond, next){
   //whatever you put here will be executed
   //on each request
   	var params = request.url.substr(1).split('/');
-	width = (params[1] || 320)|0;
-	height = (params[2] || 240)|0;
+	width = (params[1] || 160)|0;
+	height = (params[2] || 120|0;
 
 	if( params[0] == STREAM_SECRET ) {
 		console.log(

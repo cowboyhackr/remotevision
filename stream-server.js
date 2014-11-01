@@ -26,7 +26,7 @@ app.use(function(request, respond, next){
   //on each request
   	var params = request.url.substr(1).split('/');
 	width = (params[1] || 160)|0;
-	height = (params[2] || 120|0;
+	height = (params[2] || 120)|0;
 
 	if( params[0] == STREAM_SECRET ) {
 		console.log(

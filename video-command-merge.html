@@ -26,6 +26,9 @@
   <div><button ng-click="stream()">
      On
   </button></div>
+    <div><button ng-click="streamoff()">
+     Off
+  </button></div>
 	<canvas id="videoCanvas" width="160" height="120">
 		<p>
 			Please use a browser that supports the Canvas Element, like
@@ -42,6 +45,23 @@
        
        $scope.stream = function(){
              var target = 'http://fierce-beach-8075.herokuapp.com/api/command?command=stream';
+            console.log(target);
+            $http({method: 'GET', url: target}).
+              success(function(data, status, headers, config) {
+                // this callback will be called asynchronously
+                // when the response is available
+                //$scope.greeting = data;
+                console.log('success');
+              }).
+              error(function(data, status, headers, config) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                //$scope.greeting = data;
+                console.log('fail');
+              });
+       };
+      $scope.streamoff = function(){
+             var target = 'http://fierce-beach-8075.herokuapp.com/api/command?command=streamoff';
             console.log(target);
             $http({method: 'GET', url: target}).
               success(function(data, status, headers, config) {
